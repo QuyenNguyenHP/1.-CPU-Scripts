@@ -60,7 +60,7 @@ async def read_modbus_data(DG, slave_id, dg_name, imo, serial):
                 0x06: (f"{dg_name} No.2 cylinder exhaust gas temp.", 480, ">=", "cc2", "deg C", 1),
                 0x07: (f"{dg_name} No.3 cylinder exhaust gas temp.", 480, ">=", "cc3", "deg C", 1),
                 0x08: (f"{dg_name} No.4 cylinder exhaust gas temp.", 480, ">=", "cc4", "deg C", 1),
-                0x09: (f"{dg_name} No.5 cylinder exhaust gas temp.", 480, ">=", "cc5",Exhaust gas temp. T/C inlet 2 "deg C", 1),
+                0x09: (f"{dg_name} No.5 cylinder exhaust gas temp.", 480, ">=", "cc5","deg C", 1),
                 0x0A: (f"{dg_name} No.6 cylinder exhaust gas temp.", 480, ">=", "cc6", "deg C", 1),
                 0x0D: (f"{dg_name} Exhaust gas temp. T/C inlet 1", 580, ">=", "cc7", "deg C", 1),
                 0x0E: (f"{dg_name} Exhaust gas temp. T/C inlet 2", 580, ">=", "cc8", "deg C", 1),
