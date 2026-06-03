@@ -21,7 +21,7 @@ SLEEP_SECONDS = 180
 
 def zip_and_delete_csv_files():
     timestamp = datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
-    zip_filename = os.path.join(zip_dir, f'H429-{timestamp}.zip')
+    zip_filename = os.path.join(zip_dir, f'DB45-02-{timestamp}.zip')
 
     csv_files = [f for f in os.listdir(csv_dir) if f.endswith('.csv')]
     if not csv_files:

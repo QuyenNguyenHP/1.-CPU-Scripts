@@ -466,29 +466,6 @@ WantedBy=default.target
 
 ---
 
-#### 🚇 autossh-tunnel.service
-
-```bash
-sudo nano /etc/systemd/system/autossh-tunnel.service
-```
-
-```ini
-[Unit]
-Description=AutoSSH tunnel service
-After=network.target
-
-[Service]
-User=drums
-ExecStart=/usr/bin/autossh -M 20000 -N -R 19999:localhost:22 daikai@146.190.88.223
-Restart=always
-RestartSec=10
-
-[Install]
-WantedBy=multi-user.target
-```
-
----
-
 ### 8.2 🤖 Automated Install (Recommended)
 
 Copy `install_services.sh` to the device, then run:
@@ -508,10 +485,10 @@ The script writes all service files, reloads systemd, and enables + starts every
 sudo systemctl daemon-reload
 
 sudo systemctl enable modbus.service zip_csv_files.service encrypt.service \
-    send_asc_scp.service pulse.service hmi.service photo.service autossh-tunnel.service
+    send_asc_scp.service pulse.service hmi.service photo.service
 
 sudo systemctl start modbus.service zip_csv_files.service encrypt.service \
-    send_asc_scp.service pulse.service hmi.service photo.service autossh-tunnel.service
+    send_asc_scp.service pulse.service hmi.service photo.service
 ```
 
 ### 8.4 ✅ Check all service statuses
@@ -524,7 +501,6 @@ sudo systemctl status send_asc_scp.service
 sudo systemctl status pulse.service
 sudo systemctl status hmi.service
 sudo systemctl status photo.service
-sudo systemctl status autossh-tunnel.service
 ```
 
 ### 8.5 📋 View latest 100 logs
@@ -537,7 +513,6 @@ journalctl -u send_asc_scp.service -n 100
 journalctl -u pulse.service -n 100
 journalctl -u hmi.service -n 100
 journalctl -u photo.service -n 100
-journalctl -u autossh-tunnel.service -n 100
 ```
 
 > 💡 Add `-f` to follow logs in real time, e.g. `journalctl -u modbus.service -n 100 -f`
