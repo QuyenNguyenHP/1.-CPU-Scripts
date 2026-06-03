@@ -4,28 +4,28 @@
 
 ## 🚢 Project Information
 
-| Field | Details |
-|---|---|
-| 🏭 Customer | Dongbac Shipbuilding Industry Joint Stock Company |
-| 🔖 Shipyard Code | DEC-EMVN879AO |
-| 🛳️ Hull No. | DB45-02 |
-| 🆔 IMO No. | 9976991 |
-| 📐 Project Name | 45,000 DWT Bulk Carrier |
-| ⚓ Vessel Name | Truong Minh Dream 06 |
-| 🔧 Equipment | Daihatsu 6DE-18 × 3 |
-| 🔩 Engine Serial Numbers | DE618Z4755 / DE618Z4756 / DE618Z4757 |
+| Field                    | Details                                           |
+| ------------------------ | ------------------------------------------------- |
+| 🏭 Customer              | Dongbac Shipbuilding Industry Joint Stock Company |
+| 🔖 Shipyard Code         | DEC-EMVN879AO                                     |
+| 🛳️ Hull No.            | DB45-02                                           |
+| 🆔 IMO No.               | 9976991                                           |
+| 📐 Project Name          | 45,000 DWT Bulk Carrier                           |
+| ⚓ Vessel Name           | Truong Minh Dream 06                              |
+| 🔧 Equipment             | Daihatsu 6DE-18 × 3                              |
+| 🔩 Engine Serial Numbers | DE618Z4755 / DE618Z4756 / DE618Z4757              |
 
 ---
 
 ## 📋 Table of Contents
 
-1. [🖥️ OS Install & Base Setup](#1-os-install--base-setup)
+1. [🖥️ OS Install &amp; Base Setup](#1-os-install--base-setup)
 2. [⚡ CPU Performance Mode](#2-cpu-performance-mode)
 3. [🔐 SSH Hardening (Key-Only Login)](#3-ssh-hardening-key-only-login)
 4. [🔑 GPG Key Import](#4-gpg-key-import)
 5. [🔒 Zymbit Configuration](#5-zymbit-configuration)
 6. [🔗 SSH Key Setup (Pi → VM)](#6-ssh-key-setup-pi--vm)
-7. [📁 Create Folders & Scripts](#7-create-folders--scripts)
+7. [📁 Create Folders &amp; Scripts](#7-create-folders--scripts)
 8. [⚙️ Systemd Services](#8-systemd-services)
 9. [🛡️ Firewall (UFW)](#9-firewall-ufw)
 10. [🚫 Fail2Ban](#10-fail2ban)
@@ -295,17 +295,17 @@ mkdir -p /home/drums/asc \
 
 ### 📝 Scripts checklist
 
-| Script | Status |
-|---|---|
-| `pulse.py` | ✅ Required |
-| `modbus.py` | ✅ Required |
-| `zip_csv_files.py` | ✅ Required |
-| `encrypt_zip.py` | ✅ Required |
-| `send_asc_scp.py` | ✅ Required |
-| `hmi_to_dgs.py` | ✅ Required |
-| `photo_capture.py` | ✅ Required |
+| Script                | Status      |
+| --------------------- | ----------- |
+| `pulse.py`          | ✅ Required |
+| `modbus.py`         | ✅ Required |
+| `zip_csv_files.py`  | ✅ Required |
+| `encrypt_zip.py`    | ✅ Required |
+| `send_asc_scp.py`   | ✅ Required |
+| `hmi_to_dgs.py`     | ✅ Required |
+| `photo_capture.py`  | ✅ Required |
 | `send_photo_scp.py` | 🔲 Optional |
-| `modbus_to_HMI.py` | 🔲 Optional |
+| `modbus_to_HMI.py`  | 🔲 Optional |
 
 📂 Copy all scripts to `/home/drums/scripts/`.
 
@@ -370,7 +370,7 @@ Description=Encrypt Zip Files
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/drums/scripts/encrypt_zip.py
+ExecStart=/usr/bin/python3 /home/drums/scripts/encrypt_zip_file.py
 Restart=always
 RestartSec=5
 

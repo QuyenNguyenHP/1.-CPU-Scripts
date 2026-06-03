@@ -85,10 +85,10 @@ class AscFileHandler(FileSystemEventHandler):
 if __name__ == "__main__":
     directory_to_monitor = "/home/drums/asc/"
     remote_server_paths = [
-        "devdb@dsing.softether.net:/home/devdb/incoming/",
-        "opc@213.35.115.98:/lakehouse/INT"
+        #"devdb@dsing.softether.net:/home/devdb/incoming/",
+        "opc@129.150.37.135:/input/DB4502"
     ]
-    ports = [5564, None]  # Specify ports corresponding to each remote path, None for default port
+    #ports = [5564, None]  # Specify ports corresponding to each remote path, None for default port
     check_interval = 60  # Check for unsent files every 60 seconds
 
     event_handler = AscFileHandler(directory_to_monitor, remote_server_paths, ports, check_interval)
