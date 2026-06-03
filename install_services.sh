@@ -93,37 +93,6 @@ Restart=always
 WantedBy=default.target
 EOF
 
-# photo.service
-cat > "$SYSTEMD_DIR/photo.service" <<EOF
-[Unit]
-Description=Perimeter_Breach01
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/python3 /home/drums/scripts/photo_capture.py
-Restart=always
-RestartSec=5
-
-[Install]
-WantedBy=default.target
-EOF
-
-# autossh-tunnel.service
-cat > "$SYSTEMD_DIR/autossh-tunnel.service" <<EOF
-[Unit]
-Description=AutoSSH tunnel service
-After=network.target
-
-[Service]
-User=drums
-ExecStart=/usr/bin/autossh -M 20000 -N -R 19999:localhost:22 daikai@146.190.88.223
-Restart=always
-RestartSec=10
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
 echo "=== Reloading systemd daemon ==="
 systemctl daemon-reload
 
@@ -134,8 +103,6 @@ SERVICES=(
     send_asc_scp.service
     pulse.service
     hmi.service
-    photo.service
-    autossh-tunnel.service
 )
 
 echo "=== Enabling and starting services ==="
