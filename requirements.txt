@@ -1,0 +1,11 @@
+# Modbus TCP client (async) — used in modbus.py, hmi.py, usb.py
+pymodbus==3.6.8
+
+# Raspberry Pi GPIO — used in pulse.py, photo_capture.py
+RPi.GPIO
+
+# Directory/file change monitoring — used in send_asc_scp.py
+watchdog
+
+# Task scheduling — used in photo_capture.py
+schedule

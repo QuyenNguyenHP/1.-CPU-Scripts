@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Rename-Item \"d:\\\\DAIKAI\\\\OneDrive - daikai.com\\\\PROJECTS\\\\1. In Progeress\\\\3. DB45-02\\\\1. CPU Scripts\\\\systemd-services.md\" \"README.md\")",
+      "PowerShell(Rename-Item \"d:\\\\DAIKAI\\\\OneDrive - daikai.com\\\\PROJECTS\\\\1. In Progeress\\\\3. DB45-02\\\\1. CPU Scripts\\\\systemd-services.md\" \"README.md\")"
+    ]
+  }
+}
