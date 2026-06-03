@@ -217,7 +217,7 @@ async def read_modbus_data_dg1(DG1, HMI):
         print("\n=== ✅DG1 Analog Alarm ===")
         for key, label in cc_labels.items():
             val = globals().get(key) or locals().get(key)
-            print(f"DG1 {label:<50} : {val}")
+            #print(f"DG1 {label:<50} : {val}")
 
         if error_check == False:
             await HMI.write_coil(109, False, slave=HMI_SLAVE_ID) #Write SERIAL LINK FAIL 
@@ -406,7 +406,7 @@ async def read_modbus_data_dg2(DG2, HMI):
         print("\n=== ✅DG2 Analog Alarm ===")
         for key, label in bb_labels.items():
             val = globals().get(key) or locals().get(key)
-            print(f"DG2 {label:<50} : {val}")
+            #print(f"DG2 {label:<50} : {val}")
             
         if error_check == False:
             await HMI.write_coil(309, False, slave=HMI_SLAVE_ID) #Write SERIAL LINK FAIL 
@@ -586,8 +586,8 @@ async def read_modbus_data_dg3(DG3, HMI):
         print("\n=== ✅DG3 Analog Alarm ===")
         for key, label in aa_labels.items():
             val = globals().get(key) or locals().get(key)
-            print(f"DG3 {label:<50} : {val}")
-            
+            #print(f"DG3 {label:<50} : {val}")
+
         if error_check == False:
             await HMI.write_coil(509, False, slave=HMI_SLAVE_ID) #Write SERIAL LINK FAIL 
         else: 
