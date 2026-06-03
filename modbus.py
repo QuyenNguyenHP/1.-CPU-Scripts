@@ -6,22 +6,22 @@ import datetime
 from pymodbus.client import AsyncModbusTcpClient
 from pymodbus.exceptions import ModbusIOException
 
-IMO_NO = "9982201"
+IMO_NO = "9976991"
 
 DG1_IP = "192.168.100.11"
 DG1_SLAVE_ID = 16
 DG1_Name = "DG#1"
-DG1_SerialNo = "DE618Z4585"
+DG1_SerialNo = "DE618Z4755"
 
 DG2_IP = "192.168.100.12"
 DG2_SLAVE_ID = 16
 DG2_Name = "DG#2"
-DG2_SerialNo = "DE618Z4586"
+DG2_SerialNo = "DE618Z4756"
 
 DG3_IP = "192.168.100.13"
 DG3_SLAVE_ID = 16
 DG3_Name = "DG#3"
-DG3_SerialNo = "DE618Z4587"
+DG3_SerialNo = "DE618Z4757"
 
 TP_VALUES = {}
 
@@ -34,7 +34,7 @@ async def read_modbus_data(DG, slave_id, dg_name, imo, serial):
     try:
 
         dt = datetime.datetime.now()
-        logfile = f"/home/drums/csv/MODdongbac6602_{dg_name.replace('#','')}-{dt:%Y-%m-%d-%H-%M}.csv"
+        logfile = f"/home/drums/csv/MODdongbac4502_{dg_name.replace('#','')}-{dt:%Y-%m-%d-%H-%M}.csv"
 
         with open(logfile, "a", newline="") as f:
             writer = csv.writer(f)
@@ -272,7 +272,7 @@ async def main():
                 traceback.print_exc()
 
             print("\n=== ✅ WAITING 30s ===")    
-            await asyncio.sleep(30)
+            await asyncio.sleep(60)
      
     finally:
         print("🔻 Closing clients...")
